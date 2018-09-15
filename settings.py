@@ -120,3 +120,69 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# 控制颜色
+JET_DEFAULT_THEME = 'light-blue'
+# 可以选择颜色
+JET_THEMES = [
+    {
+        'theme': 'default', # theme folder name
+        'color': '#47bac1', # color of the theme's button in user menu
+        'title': 'Default' # theme title
+    },
+    {
+        'theme': 'green',
+        'color': '#44b78b',
+        'title': 'Green'
+    },
+    {
+        'theme': 'light-green',
+        'color': '#2faa60',
+        'title': 'Light Green'
+    },
+    {
+        'theme': 'light-violet',
+        'color': '#a464c4',
+        'title': 'Light Violet'
+    },
+    {
+        'theme': 'light-blue',
+        'color': '#5EADDE',
+        'title': 'Light Blue'
+    },
+    {
+        'theme': 'light-gray',
+        'color': '#222',
+        'title': 'Light Gray'
+    }
+]
+#菜单压缩
+JET_SIDE_MENU_COMPACT = False
+#自己定义菜单
+# JET_SIDE_MENU_CUSTOM_APPS = [
+#    ('core', [ # Each list element is a tuple with application name (app_label) and list of models
+#        'User',
+#        'MenuItem',
+#        'Block',
+#    ]),
+#    ('shops', [
+#        'Shop',
+#        'City',
+#        'MetroStation',
+#    ]),
+#    ('feedback', [
+#        'Feedback',
+#    ]),
+# ]
+
+# JET_SIDE_MENU_CUSTOM_APPS = [
+#     ('core', ['__all__']),
+# ]
+# 可以使用jet _custom_apps_example这个管理命令来生成JET_SIDE_MENU_CUSTOM_APPS的示例。这个示例中会包括所有的应用和模块。你可以这样使用它:
+# python manage.py jet_custom_apps_example
+# 左右选择框
+JET_CHANGE_FORM_SIBLING_LINKS = False
+# 应用的局面
+# JET_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultIndexDashboard'
+JET_APP_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultAppIndexDashboard'
