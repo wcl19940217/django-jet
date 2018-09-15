@@ -89,6 +89,8 @@ python manage.py collectstatic
 
 仪表盘已经安装了。学习Dashboard章节以自定义仪表盘。
 
+这个时候使用python mananger.py runserver 后及可以登录到后台，看后台和原来不一样了。
+
 
 6、配置#
 
